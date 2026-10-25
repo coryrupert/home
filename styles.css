@@ -1,6 +1,6 @@
 :root {
   --bg: #f7f3ee;
-  --bg-top: #0a1930; /* Changed from orange to dark navy blue */
+  --bg-top: #0a1930;
   --bg-bottom: #f7f3ee;
   --fg: #1c1916;
   --muted: #5c554e;
@@ -26,7 +26,7 @@ body.binge {
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #161311;
-    --bg-top: #071121; /* Changed from dark orange to deep navy */
+    --bg-top: #071121;
     --bg-bottom: #161311;
     --fg: #f4eee8;
     --muted: #b7aea4;
@@ -166,7 +166,8 @@ h2 {
   height: 88px;
   border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 10px 28px rgba(204, 85, 0, 0.28);
+  /* Changed from orange to navy */
+  box-shadow: 0 10px 28px rgba(10, 25, 48, 0.28);
 }
 
 body.binge .icon {
@@ -423,7 +424,6 @@ body.binge .icon {
   line-height: 1.3;
 }
 
-
 .device {
   position: relative;
   background: var(--bezel);
@@ -479,7 +479,8 @@ body.binge .icon {
 .watch {
   padding: 0.42rem 0.34rem;
   border-radius: 1.85rem;
-  background: linear-gradient(160deg, #6a645c, #1c1916 38%, #2e2a26);
+  /* Shifted warm grays to cool grays to match navy */
+  background: linear-gradient(160deg, #5c626a, #16191c 38%, #262a2e);
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.28),
     0 16px 36px rgba(28, 25, 22, 0.22);
@@ -497,7 +498,8 @@ body.binge .icon {
   width: 0.32rem;
   height: 1.35rem;
   border-radius: 0.12rem;
-  background: linear-gradient(180deg, #8a847c, #3c3732);
+  /* Shifted warm grays to cool grays */
+  background: linear-gradient(180deg, #7c848a, #32373c);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
 }
 
@@ -509,7 +511,8 @@ body.binge .icon {
   width: 0.2rem;
   height: 0.7rem;
   border-radius: 0.08rem;
-  background: #4a453f;
+  /* Shifted warm grays to cool grays */
+  background: #3f454a;
 }
 
 .icloud-devices {
@@ -586,17 +589,19 @@ body.binge .icon {
   gap: 1rem;
   margin: 0 0 1.25rem;
   padding: 1.25rem;
+  /* Changed radial spotlight and linear gradient to cool navy tones */
   background:
-    radial-gradient(circle at 20% 20%, rgba(204, 85, 0, 0.16), transparent 42%),
-    linear-gradient(160deg, #d7e4ee, #c9d6c4 55%, #e8d5c4);
+    radial-gradient(circle at 20% 20%, rgba(10, 25, 48, 0.16), transparent 42%),
+    linear-gradient(160deg, #d7e4ee, #b8c7d6 55%, #9baec4);
   border-radius: 22px;
 }
 
 @media (prefers-color-scheme: dark) {
   .widget-shelf {
+    /* Changed radial spotlight and linear gradient to deep navy tones */
     background:
-      radial-gradient(circle at 20% 20%, rgba(242, 107, 26, 0.22), transparent 42%),
-      linear-gradient(160deg, #24303a, #2a3328 55%, #3a2c22);
+      radial-gradient(circle at 20% 20%, rgba(7, 17, 33, 0.3), transparent 42%),
+      linear-gradient(160deg, #24303a, #1f2b36 55%, #16202b);
   }
 }
 
