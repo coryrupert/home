@@ -1,6 +1,6 @@
 :root {
   --bg: #f7f3ee;
-  --bg-top: #f0a05a;
+  --bg-top: #0a1930; /* Changed from orange to dark navy blue */
   --bg-bottom: #f7f3ee;
   --fg: #1c1916;
   --muted: #5c554e;
@@ -26,7 +26,7 @@ body.binge {
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #161311;
-    --bg-top: #5c240c;
+    --bg-top: #071121; /* Changed from dark orange to deep navy */
     --bg-bottom: #161311;
     --fg: #f4eee8;
     --muted: #b7aea4;
