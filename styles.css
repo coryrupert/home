@@ -1,13 +1,13 @@
 :root {
-  --bg: #f7f3ee;
-  --bg-top: #0a1930;
-  --bg-bottom: #f7f3ee;
-  --fg: #1c1916;
-  --muted: #5c554e;
-  --accent: #cc5500;
-  --rule: rgba(28, 25, 22, 0.12);
-  --card: #fffdf9;
-  --bezel: #1c1916;
+  --bg: #071324; /* Deep navy background */
+  --bg-top: #0a1930; /* Dark navy top gradient */
+  --bg-bottom: #040c17; /* Very dark navy bottom gradient */
+  --fg: #f0f4f8; /* Changed to off-white for readability on navy */
+  --muted: #94a3b8; /* Changed to light slate-grey */
+  --accent: #38bdf8; /* Completely removed orange, replaced with sky blue */
+  --rule: rgba(255, 255, 255, 0.12); /* Lightened borders/rules */
+  --card: #112240; /* Navy card background */
+  --bezel: #02060d;
   --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
@@ -25,15 +25,15 @@ body.binge {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #161311;
+    --bg: #040c17;
     --bg-top: #071121;
-    --bg-bottom: #161311;
-    --fg: #f4eee8;
-    --muted: #b7aea4;
-    --accent: #f26b1a;
-    --rule: rgba(244, 238, 232, 0.14);
-    --card: #1e1a17;
-    --bezel: #0d0b0a;
+    --bg-bottom: #040c17;
+    --fg: #f8fafc;
+    --muted: #cbd5e1;
+    --accent: #38bdf8; /* Removed orange here as well */
+    --rule: rgba(255, 255, 255, 0.14);
+    --card: #0f172a;
+    --bezel: #000000;
   }
 
   body.binge {
@@ -166,8 +166,7 @@ h2 {
   height: 88px;
   border-radius: 22px;
   overflow: hidden;
-  /* Changed from orange to navy */
-  box-shadow: 0 10px 28px rgba(10, 25, 48, 0.28);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
 }
 
 body.binge .icon {
@@ -347,7 +346,7 @@ body.binge .icon {
   -webkit-overflow-scrolling: touch;
   scrollbar-gutter: stable;
   scrollbar-width: auto;
-  scrollbar-color: var(--accent) rgba(28, 25, 22, 0.14);
+  scrollbar-color: var(--accent) var(--rule);
 }
 
 .shots-carousel::-webkit-scrollbar {
@@ -355,7 +354,7 @@ body.binge .icon {
 }
 
 .shots-carousel::-webkit-scrollbar-track {
-  background: rgba(28, 25, 22, 0.12);
+  background: var(--rule);
   border-radius: 99px;
 }
 
@@ -381,7 +380,7 @@ body.binge .icon {
   background: var(--card);
   border: 1px solid var(--rule);
   border-radius: 22px;
-  box-shadow: 0 10px 24px rgba(28, 25, 22, 0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
 }
 
 .shots-carousel .shot-card {
@@ -429,7 +428,7 @@ body.binge .icon {
   background: var(--bezel);
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.14),
-    0 16px 36px rgba(28, 25, 22, 0.22);
+    0 16px 36px rgba(0, 0, 0, 0.3);
 }
 
 .device-screen {
@@ -471,7 +470,7 @@ body.binge .icon {
   width: 0.42rem;
   height: 0.42rem;
   border-radius: 50%;
-  background: #2e2a26;
+  background: #1e293b;
   transform: translateX(-50%);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
@@ -479,11 +478,10 @@ body.binge .icon {
 .watch {
   padding: 0.42rem 0.34rem;
   border-radius: 1.85rem;
-  /* Shifted warm grays to cool grays to match navy */
   background: linear-gradient(160deg, #5c626a, #16191c 38%, #262a2e);
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.28),
-    0 16px 36px rgba(28, 25, 22, 0.22);
+    0 16px 36px rgba(0, 0, 0, 0.3);
 }
 
 .watch .device-screen {
@@ -498,7 +496,6 @@ body.binge .icon {
   width: 0.32rem;
   height: 1.35rem;
   border-radius: 0.12rem;
-  /* Shifted warm grays to cool grays */
   background: linear-gradient(180deg, #7c848a, #32373c);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
 }
@@ -511,7 +508,6 @@ body.binge .icon {
   width: 0.2rem;
   height: 0.7rem;
   border-radius: 0.08rem;
-  /* Shifted warm grays to cool grays */
   background: #3f454a;
 }
 
@@ -571,7 +567,7 @@ body.binge .icon {
   width: 100%;
   height: auto;
   border-radius: 22px;
-  box-shadow: 0 10px 24px rgba(28, 25, 22, 0.16);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
 }
 
 .shot-widget figcaption {
@@ -589,19 +585,17 @@ body.binge .icon {
   gap: 1rem;
   margin: 0 0 1.25rem;
   padding: 1.25rem;
-  /* Changed radial spotlight and linear gradient to cool navy tones */
   background:
-    radial-gradient(circle at 20% 20%, rgba(10, 25, 48, 0.16), transparent 42%),
-    linear-gradient(160deg, #d7e4ee, #b8c7d6 55%, #9baec4);
+    radial-gradient(circle at 20% 20%, rgba(10, 25, 48, 0.25), transparent 42%),
+    linear-gradient(160deg, #1e293b, #0f172a 55%, #020617);
   border-radius: 22px;
 }
 
 @media (prefers-color-scheme: dark) {
   .widget-shelf {
-    /* Changed radial spotlight and linear gradient to deep navy tones */
     background:
       radial-gradient(circle at 20% 20%, rgba(7, 17, 33, 0.3), transparent 42%),
-      linear-gradient(160deg, #24303a, #1f2b36 55%, #16202b);
+      linear-gradient(160deg, #0f172a, #020617 55%, #000000);
   }
 }
 
@@ -609,11 +603,12 @@ body.binge .icon {
   width: min(20.5rem, 100%);
   min-height: 9.6rem;
   padding: 0.9rem 1rem;
-  background: rgba(247, 247, 247, 0.94);
+  /* Updated widget background and text to use dynamic theme variables */
+  background: var(--card);
   border-radius: 22px;
-  box-shadow: 0 10px 24px rgba(28, 25, 22, 0.16);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
   font-family: var(--sans);
-  color: #1c1916;
+  color: var(--fg);
 }
 
 .ios-widget h3 {
@@ -636,7 +631,7 @@ body.binge .icon {
   height: 1.35rem;
   border-radius: 50%;
   background: var(--accent);
-  color: #fff;
+  color: #fff; /* Keeping the plus icon white for contrast against the blue button */
   font-size: 1rem;
   font-weight: 700;
   line-height: 1;
@@ -658,7 +653,7 @@ body.binge .icon {
 }
 
 .ios-widget li + li {
-  border-top: 1px solid rgba(28, 25, 22, 0.08);
+  border-top: 1px solid var(--rule);
 }
 
 .ios-widget .mark {
@@ -666,7 +661,7 @@ body.binge .icon {
   width: 0.95rem;
   height: 0.95rem;
   margin-top: 0.12rem;
-  border: 1.5px solid rgba(28, 25, 22, 0.28);
+  border: 1.5px solid var(--rule);
   border-radius: 50%;
 }
 
@@ -676,7 +671,7 @@ body.binge .icon {
 }
 
 .ios-widget .meta {
-  color: #6b7280;
+  color: var(--muted);
   font-size: 0.75rem;
 }
 
@@ -692,7 +687,7 @@ body.binge .icon {
 .bar {
   height: 0.38rem;
   overflow: hidden;
-  background: rgba(28, 25, 22, 0.1);
+  background: var(--rule);
   border-radius: 99px;
 }
 
